@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+</head>
+<body>
+    
+    <h1>Digital Clock</h1>
+    
+    <h2 id="output"></h2>
+
+    <script>
+       setInterval(() => {
+        let a = new Date();
+        
+        let hours = a.getHours();
+        let amPm = hours>=12 ? 'PM' : 'AM';
+
+        hours = hours % 12 
+        hours==0 ? 12 : hours;
+
+        let minutes = a.getMinutes();
+        if(minutes < 10){
+            minutes = '0' + minutes;
+        }
+        
+        let seconds = a.getSeconds();
+        if(seconds < 10){
+            seconds = '0' + seconds;
+        }
+
+        let result = `${hours}:${minutes}:${seconds}  ${amPm}`;
+        let output = document.getElementById('output').innerHTML = result;
+       })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date and Time</title>
+</head>
+<body>
+    <h2>Current Date and time</h2>
+    <h2 id="result"></h2>
+
+    <script>
+        let a = new Date();
+        let day = a.getDay();
+        let month = a.getMonth();
+        let year = a.getFullYear();
+
+        let output = `${day}/${month}/${year}`
+
+        let result = document.getElementById('result').innerHTML = output;
+
+    </script>
+
+</body>
+</html>

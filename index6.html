@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum , avg , product , largest , smallest</title>
+</head>
+<body>
+    <h1>Sum , avg , product , largest , smallest</h1>
+
+    <label for="num1">Enter number 1</label>
+    <input type="text" name="num1" id="num1">
+
+    <br>
+
+    <label for="num2">Enter number 2</label>
+    <input type="text" name="num2" id="num2">
+
+    <br>
+
+    <label for="num3">Enter number 3</label>
+    <input type="text" name="num3" id="num3">
+
+    <br>
+    Result : <h2 id="output"></h2>
+    
+    <button onclick="sum()">Sum</button>
+    <button onclick="average()">Average</button>
+    <button onclick="smallest()">Product</button>
+    <button onclick="largest()">largest</button>
+    <button>smallest</button>
+
+    <script>
+        let num1 = document.getElementById('num1');
+        let num2 = document.getElementById('num2');
+        let num3 = document.getElementById('num3');
+
+        function sum(){
+            let result = parseInt(num1.value) + parseInt(num2.value) + parseInt(num3.value);
+            alert(result);
+        }
+
+        function average(){
+            let result = (parseInt(num1.value) + parseInt(num2.value) + parseInt(num3.value)) / 3;
+            alert(result);
+        }
+
+        function product(){
+            let result = parseInt(num1.value) * parseInt(num2.value) * parseInt(num3.value);
+            alert(result);
+        }
+
+        function largest(){
+            
+            if(num1.value > num2.value && num1.value > num3.value){
+                alert(num1.value);
+            }
+            else if(num2.value > num1.value && num2.value > num3.value){
+                alert(num2.value);
+                
+            }
+            
+            else if(num3.value > num1.value && num3.value > num2.value){
+                alert(num3.value);
+            }
+                     
+            
+        }
+
+    </script>
+
+    
+</body>
+</html>

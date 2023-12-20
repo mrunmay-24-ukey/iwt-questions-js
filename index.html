@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Addition of two numbers</title>
+    </head>
+
+    <body>
+
+        <h1>Addition of two numbers</h1>
+
+        <label for="num1">Enter first number:</label>
+        <input type="text" name="num1" id="num1" >
+        
+        <br>
+        <label for="num2">Enter second number:</label>
+        <input type="text" name="num2" id="num2" >
+
+        <br>
+        
+        Result: <h2 id="result"></h2>
+        
+        <br>
+
+        <button onclick="sum()">Calculate</button>
+        
+        <script>
+
+               
+
+           function sum(){
+                
+                let num1 = document.getElementById('num1').value;
+                
+                let num2 = document.getElementById('num2').value;
+                let result = parseInt(num1) + parseInt(num2);
+
+                document.getElementById('result').innerHTML = result;
+
+           } 
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Even or Odd</title>
+    </head>
+    
+    <body>
+        <h1>Even or Odd</h1>
+
+        <input type="text" name="num" id="num">
+        <br>
+        Result : <h2 id="result"></h2>
+        <button onclick="check()">Check</button>
+
+        <script>
+            function check(){
+                let number = document.getElementById('num').value;
+
+            if(number%2==0){
+                document.getElementById('result').innerHTML = 'Number is Even';
+            }
+            else{
+                document.getElementById('result').innerHTML = 'Number is Odd';
+            }
+            }
+
+        </script>
+    </body>
+
+
+</html>

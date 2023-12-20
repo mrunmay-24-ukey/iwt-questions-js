@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>height</title>
+</head>
+<body>
+    <h1>Height Conversion</h1>
+
+    
+    <input type="text" name="height" id="height">
+    <button onclick="convert()">Calculate</button>
+
+    <br>
+    
+    Height in Inches : <h2 id="output"></h2>
+
+    <script>
+        let height = document.getElementById('height');
+        
+        const convert = () => {
+            let result = height.value/2.54;
+            let output = document.getElementById('output').innerHTML = result;
+            
+        }
+    </script>
+
+</body>
+</html>
